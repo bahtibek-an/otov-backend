@@ -10,8 +10,6 @@ const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const User = require("./models/user-model");
 
-const PORT = process.env.PORT || 8080;
-
 app.use(morgan("combined"));
 app.use(cookieParser());
 app.use(express.json());
