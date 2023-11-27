@@ -1,9 +1,9 @@
-const User = require("../../models/user-model");
+const User = require("../models/user-model");
 const bcrypt = require("bcrypt");
-const {generateJwt, generateRefreshTokenJwt} = require("../../helpers/generate-jwt");
-const userService = require("../../services/user-service");
-const ApiError = require("../../error/ApiError");
-const {UserDto} = require("../../dtos/user-dto");
+const {generateJwt, generateRefreshTokenJwt} = require("../helpers/generate-jwt");
+const userService = require("../services/user-service");
+const ApiError = require("../error/ApiError");
+const {UserDto} = require("../dtos/user-dto");
 const {
     INCORRECT_EMAIL_OR_PASSWORD,
     USER_ALREADY_EXISTS,
@@ -13,7 +13,7 @@ const {
     NOT_AUTHORIZED,
     INCORRECT_PHONE_NUMBER,
     SOMETHING_WENT_WRONG, CODE_SENT
-} = require("../../consts/constants");
+} = require("../consts/constants");
 class UserController {
 
     async register(req, res, next) {
